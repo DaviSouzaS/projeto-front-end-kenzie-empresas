@@ -139,11 +139,47 @@ async function checkUserType () {
     }
 }
 
+async function getAllDepartments () {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/departments`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function getSpecificDepartment (idCompany) {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/departments/${idCompany}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
 export {
     getSectors,
     getCompanies,
     getCompaniesBySector,
     register,
     login,
-    checkUserType
+    checkUserType,
+    getAllDepartments,
+    getSpecificDepartment
 }
