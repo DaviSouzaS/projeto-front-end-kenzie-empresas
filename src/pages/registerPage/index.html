@@ -21,22 +21,27 @@
     </header>
 
     <main>
-
         <div>
             <h2>Cadastre-se</h2>
-            <form>
-                <input type="text" placeholder="Seu nome">
-                <input type="email" placeholder="Seu e-mail">
-                <input type="password" placeholder="Sua senha">
-                <select>
-                    <option>Nível profissional</option>
+            <form class="register-form">
+                <input type="text" id="username" placeholder="Seu nome" required>
+
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+
+                <input type="password" id="password" placeholder="Sua senha" required>
+                <select class="select-professional-level" id="professional_level">
+                    <option selected disabled value="title-select">Nível profissional</option>
+                    <option value="sênior">Sênior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="júnior">Júnior</option>
+                    <option value="estágio">Estágio</option>
                 </select>
                 <button>Cadastre-se</button>
             </form>
             <button>Retornar</button>
         </div>
-
     </main>
-
+    
+    <script type="module" src="/src/scripts/register.js"></script>
 </body>
 </html>

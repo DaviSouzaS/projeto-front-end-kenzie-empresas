@@ -52,8 +52,37 @@ async function getCompaniesBySector (sector){
     
 }
 
+async function register(body) {
+
+    try {
+        const request = await fetch(`${baseURL}/auth/register`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+        console.log(request)
+
+        if (request.ok === true) {
+            console.log('CADASTRO BEM-SUCEDIDO')
+
+            setTimeout(() => {
+                window.location.replace('/src/pages/loginPage/index.html')
+            }, 2000);
+        }
+        
+        else {
+            console.log('CADASTRO NÃO REALIZADO')
+        }
+    }
+    catch (err) {
+    }
+}
+
 export {
     getSectors,
     getCompanies,
-    getCompaniesBySector
+    getCompaniesBySector,
+    register
 }
