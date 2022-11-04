@@ -1,6 +1,8 @@
 import { checkPermission } from "./restrictions.js";
 import { exitPage } from "./localStorage.js";
 
-checkPermission(false)
+const redirectUserPage = '/src/pages/userPage/index.html'
+
+checkPermission(false, redirectUserPage)
 
 exitPage()
