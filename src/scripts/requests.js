@@ -144,5 +144,6 @@ export {
     getCompanies,
     getCompaniesBySector,
     register,
-    login
+    login,
+    checkUserType
 }
