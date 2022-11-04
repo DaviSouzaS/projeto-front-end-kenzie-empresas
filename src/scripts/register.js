@@ -5,7 +5,6 @@ async function createUser () {
     const formElements = [...formRegister]
     const professionalLevel = document.querySelector('.select-professional-level')
     
-
     formRegister.addEventListener('submit', async (iten) => {
         iten.preventDefault()
 
