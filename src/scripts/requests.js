@@ -1,3 +1,5 @@
+import { getLocalStorage } from "./localStorage.js"
+
 const baseURL = 'http://localhost:6278'
 
 async function getSectors () {
@@ -80,9 +82,67 @@ async function register(body) {
     }
 }
 
+async function login (body) {
+    try {
+        const request = await fetch(`${baseURL}/auth/login`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+
+        if (request.ok === true) {
+
+            console.log('LOGIN FEITO COM SUCESSO')
+
+            const response = await request.json()
+            console.log(response)
+            localStorage.setItem("token", JSON.stringify(response))
+
+            const validateUser = await checkUserType()
+            
+            if (validateUser.is_admin === true) {
+                setTimeout(() => {
+                    window.location.replace('/src/pages/adminPage/index.html')
+                }, 2000);
+            }
+            else {
+                setTimeout(() => {
+                    window.location.replace('/src/pages/userPage/index.html')
+                }, 2000);
+            }
+        }
+        else {
+            console.log('ERRO NO LOGIN')
+        }
+    }
+    catch(err) {
+    }
+}
+
+async function checkUserType () {
+
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/auth/validate_user`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
 export {
     getSectors,
     getCompanies,
     getCompaniesBySector,
-    register
+    register,
+    login
 }
