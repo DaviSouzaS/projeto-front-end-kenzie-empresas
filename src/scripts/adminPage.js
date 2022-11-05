@@ -1,6 +1,6 @@
 import { checkPermission } from "./restrictions.js";
 import { exitPage } from "./localStorage.js";
-import { getCompanies, getAllDepartments, getSpecificDepartment } from "./requests.js";
+import { getCompanies, getAllDepartments, getSpecificDepartment, getAllUsers } from "./requests.js";
 
 const redirectUserPage = '/src/pages/userPage/index.html'
 
@@ -116,3 +116,43 @@ async function renderAllDepartments () {
 }
 
 renderAllDepartments()
+
+async function renderAllUsers () {
+
+    const usersList = document.querySelector('.users-list')
+
+    const users = await getAllUsers()
+
+    users.forEach(item => {
+
+        let li = document.createElement('li')
+
+        let pUsername = document.createElement('p')
+        pUsername.innerText = item.username
+
+        let pProLevel = document.createElement('p')
+        pProLevel.innerText = item.professional_level
+
+        if(pProLevel.innerText === null) {
+            pProLevel.innerText = ''
+        }
+
+        // let pCompany = document.createElement('p') PRECISO COLOCAR O NOME DA EMPRESA EM QUE O USUÁRIO TRABALHA
+       
+        let div = document.createElement('div')
+
+        let imgEdit = document.createElement('img')
+        imgEdit.src = "/src/assets/editIconSelec.svg"
+
+        let imgTrash = document.createElement('img')
+        imgTrash.src = "/src/assets/trashIcon.svg"
+
+        div.append(imgEdit, imgTrash)
+        li.append(pUsername, pProLevel, div)
+
+        usersList.appendChild(li)
+    })
+
+}
+
+renderAllUsers()

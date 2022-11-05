@@ -173,6 +173,25 @@ async function getSpecificDepartment (idCompany) {
     }
 }
 
+async function getAllUsers () {
+
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/users`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+
+}
+
 export {
     getSectors,
     getCompanies,
@@ -181,5 +200,6 @@ export {
     login,
     checkUserType,
     getAllDepartments,
-    getSpecificDepartment
+    getSpecificDepartment,
+    getAllUsers
 }
