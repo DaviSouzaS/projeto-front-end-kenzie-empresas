@@ -332,6 +332,75 @@ async function demitUsers (userId) {
     }
 }
 
+async function getUserInfos () {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/users/profile`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function getCompanyInfos () {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/users/departments/coworkers`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function userDepartmentInfos () {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/users/departments`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function editUserInfos (body) {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/users`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            },
+            body: JSON.stringify(body) 
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
 export {
     getSectors,
     getCompanies,
@@ -349,5 +418,9 @@ export {
     deleteDepartment,
     usersWithoutDepartment,
     hireUsers,
-    demitUsers
+    demitUsers,
+    getUserInfos,
+    getCompanyInfos,
+    userDepartmentInfos,
+    editUserInfos
 }
