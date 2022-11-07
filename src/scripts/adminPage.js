@@ -56,17 +56,22 @@ async function renderSpecificDepartment (id) {
 
     departments.forEach(item => {
         let li = document.createElement('li')
+        li.classList = 'display-flex justify-content-center align-items-center'
 
         let departmentName = document.createElement('p')
+        departmentName.classList.add('.department-name')
         departmentName.innerText = item.name
 
         let departmentDesc = document.createElement('p')
+        departmentDesc.classList.add('.department-desc')
         departmentDesc.innerText = item.description
 
         let companyName = document.createElement('p')
+        companyName.classList.add('.company-name')
         companyName.innerText = item.companies.name
 
         let div = document.createElement('div')
+        div.classList.add('.icons-box')
 
         let imgEye = document.createElement('img')
         imgEye.src = "/src/assets/eyeIcon.svg"
@@ -106,19 +111,25 @@ async function renderAllDepartments () {
 
     departments.forEach(item => {
         let li = document.createElement('li')
+        li.classList = 'display-flex justify-content-center flex-direction-column'
 
         let departmentName = document.createElement('p')
+        departmentName.classList.add('department-name')
         departmentName.innerText = item.name
 
         let departmentDesc = document.createElement('p')
+        departmentDesc.classList.add('department-desc')
         departmentDesc.innerText = item.description
 
         let companyName = document.createElement('p')
+        companyName.classList.add('company-name')
         companyName.innerText = item.companies.name
 
         let div = document.createElement('div')
+        div.classList = 'display-flex justify-content-center gap-20'
 
         let imgEye = document.createElement('img')
+        imgEye.classList.add('button-icon')
         imgEye.src = "/src/assets/eyeIcon.svg"
 
         imgEye.addEventListener('click', () => {
@@ -126,6 +137,7 @@ async function renderAllDepartments () {
         })
 
         let imgEdit = document.createElement('img')
+        imgEdit.classList.add('button-icon')
         imgEdit.src = "/src/assets/editIcon.svg"
 
         imgEdit.addEventListener('click', () => {
@@ -133,6 +145,7 @@ async function renderAllDepartments () {
         })
 
         let imgTrash = document.createElement('img')
+        imgTrash.classList.add('button-icon')
         imgTrash.src = "/src/assets/trashIcon.svg"
 
         imgTrash.addEventListener('click', () => {
