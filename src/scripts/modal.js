@@ -17,7 +17,13 @@ function closeModal (button) {
     })
 }
 
+function closeModalInstantly () {
+    modalBg.remove()
+    modalBg.innerHTML = ''
+}
+
 export {
     openModal,
-    closeModal
+    closeModal,
+    closeModalInstantly
 }
