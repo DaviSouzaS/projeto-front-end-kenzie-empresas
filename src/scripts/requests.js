@@ -192,6 +192,146 @@ async function getAllUsers () {
 
 }
 
+async function deleteUser (userId) {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/admin/delete_user/${userId}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function editUser (body, userId) {
+    const localStorage = getLocalStorage()
+    
+    try {
+        const request = await fetch(`${baseURL}/admin/update_user/${userId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            },
+            body: JSON.stringify(body) 
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function createDepartment (body) {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/departments`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            },
+            body: JSON.stringify(body) 
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function editDepartment (departmentId, body) {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/departments/${departmentId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            },
+            body: JSON.stringify(body) 
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function deleteDepartment (departmentId) {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/departments/${departmentId}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function usersWithoutDepartment () {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/admin/out_of_work`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function hireUsers (body) {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/departments/hire/`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            },
+            body: JSON.stringify(body) 
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
+async function demitUsers (userId) {
+    const localStorage = getLocalStorage()
+
+    try {
+        const request = await fetch(`${baseURL}/departments/dismiss/${userId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const response = await request.json()
+        return response
+    } catch (err) {
+    }
+}
+
 export {
     getSectors,
     getCompanies,
@@ -201,5 +341,13 @@ export {
     checkUserType,
     getAllDepartments,
     getSpecificDepartment,
-    getAllUsers
+    getAllUsers,
+    deleteUser,
+    editUser,
+    createDepartment,
+    editDepartment,
+    deleteDepartment,
+    usersWithoutDepartment,
+    hireUsers,
+    demitUsers
 }
