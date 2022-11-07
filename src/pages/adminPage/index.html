@@ -5,40 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Page</title>
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
     <link rel="stylesheet" href="/src/styles/modal.css">
     <link rel="stylesheet" href="/src/styles/displays.css">
+    <link rel="stylesheet" href="/src/styles/buttons.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <div>
-            <span>
-                <div></div>
+        <div class="container display-flex space-between">
+            <span class="display-flex gap-15 align-items-center">
+                <div class="logo"></div>
                 <img src="/src/assets/logo.svg" alt="logo">
             </span>
-            <button class="exit-page">Logout</button>
+            <button class="exit-page logout-button">Logout</button>
         </div>
     </header>
 
     <section>
-        <div>
-            <p>Departamentos</p>
+        <div class="container display-flex space-between">
+            <p class="department-title">Departamentos</p>
             <select class="company-list">
                 <option value="select-companies">Selecionar empresa</option>
             </select>
             
-            <span class="add-department">
+            <span class="add-department display-flex justify-content-center align-items-center gap-20">
                 <img src="/src/assets/addIcon.svg" alt="addIcon">
                 <p>Criar</p>
             </span>
             
         </div>
-        <ul class="departments-list">
+        <ul class="container departments-list display-flex warp">
         </ul>
     </section>
 
-    <section>
-        <p>Usuários cadastrados</p>
-        <ul class="users-list">
+    <section class="container display-flex flex-direction-column">
+        <p class="user-title">Usuários cadastrados</p>
+        <ul class="container users-list departments-list display-flex warp">
         </ul>
     </section>
     
