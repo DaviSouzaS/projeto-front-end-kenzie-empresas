@@ -6,6 +6,10 @@
     flex-direction: column;
 }
 
+.flex-end {
+    justify-content: flex-end;
+}
+
 .space-between {
     justify-content: space-between;
 }
