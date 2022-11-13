@@ -1,0 +1,36 @@
+.input-edit-department {
+    width: 422px;
+    height: 113px;
+    border: 1px solid var(--color10);
+    margin-top: 30px;
+    margin-bottom: 14px;
+}
+
+.input-edit-department::placeholder {
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    color: var(--color11);
+}
+
+.select-modals {
+    width: 422px;
+    height: 52px;
+    border: 1px solid var(--color10);
+    margin-bottom: 15px;
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    color: var(--color11);
+    cursor: pointer;
+}
+
+.input-default {
+    width: 422px;
+    height: 52px;
+    border: 1px solid var(--color10);
+}
+
+.input-default::placeholder {
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    color: var(--color11);
+}

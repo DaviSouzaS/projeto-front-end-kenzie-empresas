@@ -22,6 +22,12 @@ header {
     font-size: var(--font-size-1);
 }
 
+.box-title-user {
+    width: 100%;
+    margin-top: 69px;
+    margin-bottom: 16px;
+}
+
 .company-list {
     width: 282px;
     height: 32px;
@@ -45,7 +51,7 @@ header {
 .departments-list > li{
     background-color: var(--color2);
     border-bottom: 1px solid var(--color1);
-    width: 390px;
+    width: 415px;
     height: 190px;
     margin-top: 34px;
     margin-left: 36px;
@@ -60,6 +66,22 @@ header {
     font-size: var(--font-size-2);
 }
 
+.user-name {
+    margin-top: 34px;
+    margin-bottom: 10px;
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-2);
+}
+
+.icon-box {
+    margin-top: 50px;
+}
+
+.pro-level-item {
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+}
+
 .department-desc {
     margin-bottom: 10px;
     font-weight: var(--font-weight-2);
@@ -70,6 +92,10 @@ header {
     margin-bottom: 35px;
     font-weight: var(--font-weight-2);
     font-size: var(--font-size-3);
+}
+
+.section-users {
+    margin-bottom: 44px;
 }
 
 .department-bar {
@@ -86,4 +112,14 @@ header {
   
 .departments-list::-webkit-scrollbar-thumb {
     background-color:var(--color1);   
+}
+
+.no-departments {
+    width: 100%;
+    height: 100%;
+}
+
+.no-departments > p {
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-1);
 }
