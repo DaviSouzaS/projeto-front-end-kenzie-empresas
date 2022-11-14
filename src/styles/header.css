@@ -1,0 +1,12 @@
+header {
+    margin-top: 16px;
+    width: 100%;
+    border-bottom: 1px solid var(--color8);
+}
+
+.logo {
+    background-color: var(--color6);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}

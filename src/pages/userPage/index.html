@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/reset.css">
     <link rel="stylesheet" href="/src/styles/globalStyles.css">
-    <link rel="stylesheet" href="/src/styles/displays.css">
     <link rel="stylesheet" href="/src/styles/modal.css">
+    <link rel="stylesheet" href="/src/styles/displays.css">
+    <link rel="stylesheet" href="/src/styles/buttons.css">
+    <link rel="stylesheet" href="/src/styles/input.css">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="stylesheet" href="index.css">
     <title>User Page</title>
 </head>
 <body>
     <header>
-        <div>
-            <span>
-                <div></div>
+        <div class="container display-flex space-between">
+            <span class="display-flex gap-15 align-items-center">
+                <div class="logo"></div>
                 <img src="/src/assets/logo.svg" alt="logo">
             </span>
-            <button class="exit-page">Logout</button>
+            <button class="exit-page logout-button">Logout</button>
         </div>
     </header>
 
     <main>
-        <section class="user-infos">
+        <section class="user-infos container display-flex space-between align-items-center">
             
         </section>
 
-        <section class="company-infos">
+        <section class="container depart-infos">
            
         </section>
     </main>
