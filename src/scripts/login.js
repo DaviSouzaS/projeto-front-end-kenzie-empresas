@@ -1,4 +1,6 @@
 import { login } from "./requests.js";
+import { createMenuHeader } from "./header.js";
+
 
 function userLogin () {
 
@@ -22,3 +24,4 @@ function userLogin () {
 }
 
 userLogin()
+createMenuHeader()

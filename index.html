@@ -5,17 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/styles/displays.css">
+    <link rel="stylesheet" href="/src/styles/buttons.css">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <div>
-
-            <span>
-                <div></div>
+        <div class="container header-box display-flex space-between">
+            <span class="display-flex gap-15 align-items-center">
+                <div class="logo"></div>
                 <img src="/src/assets/logo.svg" alt="logo">
             </span>
 
-            <img src="/src/assets/menuIcon.svg" alt="menu-hamburguer ">
+            <div class="menu-icon-box"></div>
+            <div class="header-buttons">
+                <a href="src/pages/loginPage/index.html" class="button-login-desktop">Login</a>
+                <a href="src/pages/registerPage/index.html" class="button-register-desktop">Cadastro</a>
+            </div>
+        </div>
+        <div class="menu-box">
+            <div class="container menu-hamburguer display-flex space-between align-items-center gap-12">
+                <a href="/src/pages/loginPage/index.html" class="button-login-mobile">Login</a>
+                <a href="/src/pages/registerPage/index.html" class="button-register-mobile">Cadastro</a>
+            </div>
         </div>
     </header>
 
