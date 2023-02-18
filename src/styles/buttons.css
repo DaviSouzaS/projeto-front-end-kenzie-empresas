@@ -123,3 +123,74 @@
     color: var(--color2);
     background-color: var(--color4);
 }
+
+.button-login-desktop {
+    cursor: pointer;
+    padding: 13px 45px;
+    background-color: var(--color2);
+    border: 1px solid var(--color1);
+    text-decoration: none;
+    color: var(--color1);
+    font-family: var(--principal-font);
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    margin-left: 25px;
+}
+
+.button-register-desktop {
+    cursor: pointer;
+    padding: 13px 45px;
+    background-color: var(--color1);
+    border: none;
+    text-decoration: none;
+    color: var(--color2);
+    font-family: var(--principal-font);
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    margin-right: 25px;
+}
+
+.button-login-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 149px;
+    height: 48px;
+    background-color: var(--color2);
+    border: 1px solid var(--color1);
+    text-decoration: none;
+    color: var(--color1);
+    font-family: var(--principal-font);
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    margin-left: 25px;
+}
+
+.button-login-desktop:hover, .button-login-mobile:hover {
+    transition-duration: 0.3s;
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.button-register-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 149px;
+    height: 48px;
+    background-color: var(--color1);
+    border: none;
+    text-decoration: none;
+    color: var(--color2);
+    font-family: var(--principal-font);
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    margin-right: 25px;
+}
+
+.button-register-desktop:hover, .button-register-mobile:hover {
+    transition-duration: 0.3s;
+    background-color: var(--color12);
+}

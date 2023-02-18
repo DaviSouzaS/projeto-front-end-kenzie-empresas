@@ -1,4 +1,5 @@
 import { getSectors, getCompanies, getCompaniesBySector } from "./requests.js";
+import { createMenuHeader } from "./header.js"
 
 async function renderSectors () {
 
@@ -80,4 +81,4 @@ async function filterCompanies(sector) {
     })
 }
 
-
+createMenuHeader()
