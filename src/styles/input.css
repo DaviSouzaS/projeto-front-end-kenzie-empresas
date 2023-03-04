@@ -35,17 +35,45 @@
     color: var(--color11);
 }
 
-.input-form-box {
-    min-width: 294px;
+.input-box {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 52px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: var(--color2);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.input-form-box {
+    width: 90%;
     margin: 0;
     padding: 0;
+    border: none;
+}
+
+.input-form-box:-webkit-autofill, input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.input-form-box:focus {
+    outline: none;
 }
 
 .input-form-box::placeholder {
     font-weight: var(--font-weight-2);
     font-size: var(--font-size-3);
     color: rgba(0, 0, 0, 0.5);
+}
+
+.select-box {
+    height: 52px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+}
+
+.select-box:focus {
+    outline: none;
 }
