@@ -1,0 +1,26 @@
+.business-sectors {
+    width: 90%;
+    border: 10px solid var(--color1);
+    margin-top: 20px;
+    height: 52px;
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.companies-list {
+    width: 90%;
+    background-color: var(--color9);
+    padding: 25px 0;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.companies-list > li {
+    height: 211px;
+    width: 60%;
+    min-width: 200px;
+    background-color: var(--color2);
+    padding: 0 20px;
+    border-bottom: 1px solid var(--color1);
+}
+
