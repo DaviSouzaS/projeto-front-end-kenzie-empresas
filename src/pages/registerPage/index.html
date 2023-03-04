@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/src/styles/displays.css">
     <link rel="stylesheet" href="/src/styles/buttons.css">
     <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="stylesheet" href="/src/styles/input.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
@@ -33,25 +35,33 @@
         </div>
     </header>
 
-    <main>
-        <div>
-            <h2>Cadastre-se</h2>
-            <form class="register-form">
-                <input type="text" id="username" placeholder="Seu nome" required>
-
-                <input type="email" id="email" placeholder="Seu e-mail" required>
-
-                <input type="password" id="password" placeholder="Sua senha" required>
-                <select class="select-professional-level" id="professional_level">
-                    <option selected disabled value="title-select">Nível profissional</option>
-                    <option value="sênior">Sênior</option>
-                    <option value="pleno">Pleno</option>
-                    <option value="júnior">Júnior</option>
-                    <option value="estágio">Estágio</option>
-                </select>
-                <button>Cadastre-se</button>
-            </form>
-            <button>Retornar</button>
+    <main class="display-flex justify-content-center align-items-center">
+        <div class="form-box display-flex justify-content-center align-items-center">
+            <div class="display-flex justify-content-center">
+                <div class="display-flex gap-20 flex-direction-column align-items-center">
+                    <h2>Cadastre-se</h2>
+                    <form class="register-form display-flex flex-direction-column gap-20">
+                        <div class="input-box">
+                            <input class="input-form-box" type="text" id="username" placeholder="Seu nome" required>
+                        </div>
+                        <div class="input-box">
+                            <input class="input-form-box" type="email" id="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="input-box">
+                            <input class="input-form-box" type="password" id="password" placeholder="Sua senha" required>
+                        </div>
+                        <select class="select-professional-level select-box" id="professional_level">
+                            <option selected disabled value="title-select">Nível profissional</option>
+                            <option value="sênior">Sênior</option>
+                            <option value="pleno">Pleno</option>
+                            <option value="júnior">Júnior</option>
+                            <option value="estágio">Estágio</option>
+                        </select>
+                        <button class="button-form-box-1">Cadastre-se</button>
+                    </form>
+                    <a href="../loginPage/index.html" class="button-form-box-2" >Retornar</a>
+                </div>
+            </div>
         </div>
     </main>
     
