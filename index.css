@@ -1,0 +1,103 @@
+.business-sectors {
+    width: 90%;
+    border: 10px solid var(--color1);
+    margin-top: 20px;
+    height: 52px;
+    background-color: var(--color1);
+    color: var(--color2);
+    font-size: var(--font-size-3);
+}
+
+.companies-box {
+    width: 100%;
+}
+
+.companies-list {
+    width: 90%;
+    background-color: var(--color9);
+    padding: 25px 0;
+    overflow-x: scroll;
+    box-shadow: 0px 0px 10px #0000002b;
+    
+}
+
+.companies-list > li {
+    height: 211px;
+    width: 60%;
+    min-width: 200px;
+    background-color: var(--color2);
+    padding: 0 20px;
+    border-bottom: 1px solid var(--color1);
+    margin: 0 10px;
+}
+
+.companie-title {
+    margin-top: 15px;
+    margin-bottom: 70px;
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-2);
+}
+
+.companie-sector {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    color: var(--color1);
+    padding: 5px;
+    width: 50%;
+    border: 1px solid var(--color1);
+    border-radius: 255px;
+}
+
+.home-image {
+    display: none;
+}
+
+@media(min-width: 800px) {
+    .companies-list-desktop {
+        flex-direction: column;
+        overflow-x: auto;
+        align-items: center;
+        gap: 20px;
+        max-height: 550px;
+        overflow-y: scroll;
+        margin-bottom: 50px;
+    }
+
+    .companies-list-desktop::-webkit-scrollbar {
+        width: 9px;               
+    }
+  
+    .companies-list-desktop::-webkit-scrollbar-track {
+        background: transparent;        
+    }
+  
+    .companies-list-desktop::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color:var(--color1);   
+    }
+
+    .companie-sector-desktop {
+        margin-bottom: 15px;
+    }
+
+    .companies-box-desktop {
+        max-width: 550px;
+    }
+
+    .companies-list-desktop > li {
+        width: 85%;
+    }
+
+    .home-image {
+        margin-top: 20px;
+    }
+
+    .home-image, .home-image > img {
+        display: block;
+        height: 652px;
+        width: 570px;
+    }
+
+}
+

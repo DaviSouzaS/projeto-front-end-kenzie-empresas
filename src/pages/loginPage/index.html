@@ -5,32 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/styles/displays.css">
+    <link rel="stylesheet" href="/src/styles/buttons.css">
+    <link rel="stylesheet" href="/src/styles/header.css">
+    <link rel="stylesheet" href="/src/styles/input.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <div>
-
-            <span>
-                <div></div>
+        <div class="container header-box display-flex space-between">
+            <span class="display-flex gap-15 align-items-center">
+                <div class="logo"></div>
                 <img src="/src/assets/logo.svg" alt="logo">
             </span>
 
-            <img src="/src/assets/menuIcon.svg" alt="menu-hamburguer ">
+            <div class="menu-icon-box"></div>
+            <div class="header-buttons">
+                <a href="/index.html" class="button-login-desktop">Home</a>
+                <a href="/src/pages/registerPage/index.html" class="button-register-desktop">Cadastro</a>
+            </div>
+        </div>
+        <div class="menu-box">
+            <div class="container menu-hamburguer display-flex space-between align-items-center gap-12">
+                <a href="/index.html" class="button-login-mobile">Home</a>
+                <a href="/src/pages/registerPage/index.html" class="button-register-mobile">Cadastro</a>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main class="display-flex justify-content-center align-items-center">
 
-        <div>
-            <h2>Login</h2>
-            <p>Preencha os campos para realizar login</p>
-            <form class="form-login">
-                <input type="email" id="email" placeholder="Seu e-mail">
-                <input type="password" id="password" placeholder="Sua senha">
-                <button>Login</button>
-            </form>
-            <p>ou</p>
-            <button>Cadastre-se</button>
+        <div class="form-box display-flex justify-content-center align-items-center">
+            <div class="display-flex justify-content-center"> 
+                <div class="display-flex gap-20 flex-direction-column align-items-center">
+                    <h2>Login</h2>
+                    <p class="form-waring">Preencha os campos para realizar login</p>
+                    <form class="form-login display-flex flex-direction-column gap-20">
+                        <div class="input-box">
+                            <input class="input-form-box" type="email" id="email" placeholder="Seu e-mail">
+                        </div>
+                        <div class="input-box">
+                            <input class="input-form-box" type="password" id="password" placeholder="Sua senha">
+                        </div>
+                        <button class="button-form-box-1">Login</button>
+                    </form>
+                    <p>ou</p>
+                    <a href="../registerPage/index.html" class="button-form-box-2">Cadastre-se</a>
+                </div>
+            </div>
         </div>
 
     </main>

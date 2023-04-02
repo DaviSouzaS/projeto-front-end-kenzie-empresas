@@ -1,4 +1,5 @@
 import { register } from "./requests.js"
+import { createMenuHeader } from "./header.js";
 
 async function createUser () {
     const formRegister = document.querySelector('.register-form')
@@ -28,3 +29,4 @@ async function createUser () {
 }
 
 createUser()
+createMenuHeader()

@@ -6,3 +6,167 @@
     height: 100vh;
     width: 100%;
 }
+
+.modal-edit-department {
+    width: 506px;
+    height: 330px;
+    background-color: var(--color2);
+}
+
+.modal-title {
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-4);
+}
+
+.title-modal-box {
+    width: 430px;
+}
+
+.modal-edit-user {
+    width: 506px;
+    height: 342px;
+    background-color: var(--color2);
+}
+
+.modal-delete-user {
+    width: 733px;
+    height: 292px;
+    background-color: var(--color2);
+}
+
+.edit-user {
+    margin-bottom: 20px;
+}
+
+.delete-user {
+    width: 500px;
+    margin-bottom: 34px;
+    text-align: center;
+}
+
+.modal-create-departament {
+    width: 506px;
+    height: 402px;
+    background-color: var(--color2);
+}
+
+.modal-delete-department {
+    width: 733px;
+    height: 342px;
+    background-color: var(--color2);
+}
+
+.modal-open-department {
+    width: 857px;
+    height: 590px;
+    background-color: var(--color2);
+}
+
+.title-create-department {
+    margin-bottom: 20px;
+}
+
+.title-delete-department {
+    width: 470px;
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.title-department {
+    margin-bottom: 31px;
+    margin-left: 43px;
+}
+
+.modal-contet {
+    width: 100%;
+    height: 100%;
+}
+
+.department-title-box {
+    width: 100%;
+}
+
+.department-infos {
+    width: 100%;
+}
+
+.department-infos > span {
+    margin-left: 43px;
+}
+
+.department-infos > div > select {
+    width: 422px;
+    height: 52px;
+    margin-right: 39px;
+}
+
+.box-button-get {
+    width: 100%;
+}
+
+.modal-delete-company-name {
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    margin-top: 11px;
+}
+
+.modal-delete-department-desc {
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-2);
+}
+
+.department-user-list {
+    width: 814px;
+    height: 290px;
+    margin: 51px 0 0 43px;
+    background-color: var(--color9);
+    overflow-x: auto;
+}
+
+.department-user-list::-webkit-scrollbar {
+    height: 9px;               
+}
+  
+.department-user-list::-webkit-scrollbar-track {
+    background: transparent;        
+}
+  
+.department-user-list::-webkit-scrollbar-thumb {
+    background-color:var(--color1);   
+}
+
+.department-user-list > li {
+    min-width: 306px;
+    height: 196px;
+    background-color: var(--color2);
+    border-bottom: 1px solid var(--color1);
+    margin-left: 33px;
+}
+
+.username-card {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    margin: 18px 0 0 29px;
+}
+
+.info-card {
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    margin: 10px 0 0 29px;
+}
+
+.modal-edit-user {
+    width: 506px;
+    height: 411px;
+    background-color: var(--color2);
+}
+
+.title-modal {
+    width: 422px;
+    margin-bottom: 20px;
+}
+
+.title-modal > p {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+}

@@ -1,4 +1,5 @@
 import { getSectors, getCompanies, getCompaniesBySector } from "./requests.js";
+import { createMenuHeader } from "./header.js"
 
 async function renderSectors () {
 
@@ -39,12 +40,15 @@ async function renderAllCompanies() {
         let li = document.createElement('li')
 
         let pName = document.createElement('p')
+        pName.classList = "companie-title"
         pName.innerText = item.name
 
         let pHours = document.createElement('p')
+        pHours.classList = "companie-hour"
         pHours.innerText = item.opening_hours
 
         let pSector = document.createElement('p')
+        pSector.classList = "companie-sector companie-sector-desktop"
         pSector.innerText = item.sectors.description
 
         li.append(pName, pHours, pSector)
@@ -66,12 +70,15 @@ async function filterCompanies(sector) {
         let li = document.createElement('li')
 
         let pName = document.createElement('p')
+        pName.classList = "companie-title"
         pName.innerText = item.name
 
         let pHours = document.createElement('p')
+        pHours.classList = "companie-hour"
         pHours.innerText = item.opening_hours
 
         let pSector = document.createElement('p')
+        pSector.classList = "companie-sector companie-sector-desktop"
         pSector.innerText = item.sectors.description
 
         li.append(pName, pHours, pSector)
@@ -80,4 +87,4 @@ async function filterCompanies(sector) {
     })
 }
 
-
+createMenuHeader()

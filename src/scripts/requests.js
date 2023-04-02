@@ -156,7 +156,7 @@ async function getAllDepartments () {
     }
 }
 
-async function getSpecificDepartment (idCompany) {
+async function getSpecificDepartments (idCompany) {
     const localStorage = getLocalStorage()
 
     try {
@@ -409,7 +409,7 @@ export {
     login,
     checkUserType,
     getAllDepartments,
-    getSpecificDepartment,
+    getSpecificDepartments,
     getAllUsers,
     deleteUser,
     editUser,

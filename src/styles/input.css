@@ -1,0 +1,79 @@
+.input-edit-department {
+    width: 422px;
+    height: 113px;
+    border: 1px solid var(--color10);
+    margin-top: 30px;
+    margin-bottom: 14px;
+}
+
+.input-edit-department::placeholder {
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    color: var(--color11);
+}
+
+.select-modals {
+    width: 422px;
+    height: 52px;
+    border: 1px solid var(--color10);
+    margin-bottom: 15px;
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    color: var(--color11);
+    cursor: pointer;
+}
+
+.input-default {
+    width: 422px;
+    height: 52px;
+    border: 1px solid var(--color10);
+}
+
+.input-default::placeholder {
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    color: var(--color11);
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 52px;
+    background-color: var(--color2);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.input-form-box {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.input-form-box:-webkit-autofill, input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.input-form-box:focus {
+    outline: none;
+}
+
+.input-form-box::placeholder {
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.select-box {
+    height: 52px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+}
+
+.select-box:focus {
+    outline: none;
+}
